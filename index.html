@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="css/style.css">-->
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+
+
+    <link rel="stylesheet" href="build/css/all_min.css">
+    <script src="build/js/all_min.js"></script>
+
+
+<!--    <script src="js/script.js"></script>
+    <script src="js/ajax_script.js"></script>-->
+
+<!--    <link rel="stylesheet" href="build/css/all.css">
+<script src="build/js/all.js"></script>-->
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper_header">
+        <div class="wrapper_header-log">
+            <a href="#" class="wrapper_header-login">Log in</a>
+            <a href="#" class="wrapper_header-signup">Sign up</a>
+        </div>
+        <span class="wrapper_header-p">URLAUBSGLÜCK</span>
+        <div class="wrapper_header-breack"></div>
+        <span class="wrapper_header-tagline">SHARE YOUR</span>
+        <span class="wrapper_header-tagline">HOLIDAY DREAMS</span>
+        <span class="wrapper_header-tagline_sm">And find the perfect partner to fullfill it</span>
+        <a href="" class="wrapper_header-bfind">Find your holiday partner</a>
+    </div>
+    <div class="wrapper_main">
+        <div class="wrapper_main_howWorks">
+            <p class="wrapper_main_howWorks-title">How Urlaubsglück works?</p>
+            <div class="wrapper_main_howWorks_slideL">
+                <ul id="slides1">
+                    <li class="slide showing"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                </ul>
+                <div id="previous1"></div>
+                <div id="next1"></div>
+                <div class="wrapper_main_howWorks_slider_text">
+
+                    <p class="wrapper_main_howWorks_sliderL_p1">STEP1</p>
+                    <p class="wrapper_main_howWorks_sliderL_p2">Sed leo enim, condimentum</p>
+                    <p class="wrapper_main_howWorks_sliderL_p3">Quisque libero libero, dictum non turpis in, luctus
+                        semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                </div>
+            </div>
+            <div class="wrapper_main_howWorks_slideR">
+                <ul id="slides2">
+                    <li class="slide showing"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                </ul>
+                <div id="previous2"></div>
+                <div id="next2"></div>
+                <div class="wrapper_main_howWorks_slider_text">
+                    <p class="wrapper_main_howWorks_sliderL_p1">STEP3</p>
+                    <p class="wrapper_main_howWorks_sliderL_p2">Sed leo enim, condimentum</p>
+                    <p class="wrapper_main_howWorks_sliderL_p3">Quisque libero libero, dictum non turpis in, luctus
+                        semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                </div>
+            </div>
+            <div class="wrapper_main_howWorks_slideC">
+                <ul id="slides3">
+                    <li class="slide showing"></li>
+                    <li class="slide"></li>
+                    <li class="slide"></li>
+                </ul>
+                <div id="previous3"></div>
+                <div id="next3"></div>
+                <div class="wrapper_main_howWorks_slider_text">
+                    <p class="wrapper_main_howWorks_sliderL_p1">STEP2</p>
+                    <p class="wrapper_main_howWorks_sliderL_p2">Morbi velit risus</p>
+                    <p class="wrapper_main_howWorks_sliderL_p3">Nulla venenatis tempor dui in molestie. Nulla quis
+                        dictum purus, sit amet porttitor est.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="wrapper_main_partners">
+            <p class="wrapper_main_partners-title">Meet a partner for your best holiday</p>
+            <div class="wrapper_main_partners_block">
+                <div class="wrapper_main_partners1-img photo_partner"></div>
+                <p class="wrapper_main_partners_name">Bradley Hunter</p>
+                <p class="wrapper_main_partners_comment">Based in Chicago. I love playing tennis and loud music.</p>
+            </div>
+
+            <div class="wrapper_main_partners_block">
+                <div class="wrapper_main_partners2-img photo_partner"></div>
+                <p class="wrapper_main_partners_name">Heather Walker</p>
+                <p class="wrapper_main_partners_comment">I'm a happy person that loves cats and climbing on
+                    mountains.</p>
+            </div>
+            <div class="wrapper_main_partners_block">
+                <div class="wrapper_main_partners3-img photo_partner"></div>
+                <p class="wrapper_main_partners_name">Lucas Marsha</p>
+                <p class="wrapper_main_partners_comment">I get my inspiration from nature and objects around me. I have
+                    a passion to colours, typography and skateboards.</p>
+            </div>
+            <div class="wrapper_main_partners_block">
+                <div class="wrapper_main_partners4-img photo_partner"></div>
+                <p class="wrapper_main_partners_name">Bradley Hunter</p>
+                <p class="wrapper_main_partners_comment">Based in Chicago. I love playing tennis and loud music.</p>
+            </div>
+            <br>
+            <a class="wrapper_main_partners-search" href="#">See other partners</a>
+        </div>
+        <div class="wrapper_main_holiday">
+            <p class="wrapper_main_holiday-title">Discover holiday activity ideas</p>
+
+
+            <div id="wrapper_main_holiday-grid" class="grid">
+
+            </div>
+            <div class="wrapper_main_discover_holiday">
+                <p class="wrapper_main_holiday-title">Discover holiday activity ideas</p>
+                <p class="wrapper_main_discover_holiday-wyw">Hi! What are your holiday interests?</p>
+            </div>
+            <div id="search">
+                <input type="text" name="field" id="field" placeholder="&nbsp Enter your interests"/>
+                <input type="submit" name="submit" id="submit" value="Search partners"/>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_line">
+
+    </div>
+    <div class="footer">
+        <div class="footer_c1">
+            <span>URLAUBSGLÜCK</span>
+        </div>
+        <div class="footer_c2">
+            <p>Company</p>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer_c3">
+            <p>Partners</p>
+        </div>
+        <img class="footer_logo" src="img/footer_logo.png" alt="">
+
+    </div>
+</div>
+</body>
+</html>
+

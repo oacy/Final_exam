@@ -1,0 +1,655 @@
+//colors
+$white: white;
+$color_bittersweet_approx: #ff6666;
+$color_mine_shaft_approx: #333333;
+$color_celeste_approx: #cccccc;
+$color_sunset_orange_approx: #ff4e50;
+$color_alto_approx: #d9d9d9;
+$color_storm_dust_approx: #666666;
+
+//fonts
+$font_0: Montserrat;
+$font_1: sans-serif;
+$font_2: Roboto Light;
+
+//urls
+$url_0: url(../../img/Promo.jpg);
+$url_1: url(../../img/step1.jpg);
+$url_2: url(../../img/step2.jpg);
+$url_3: url(../../img/step3.jpg);
+$url_4: url(../../img/slider_controls.png);
+$url_5: url(../../img/partners.png);
+
+//@extend-elements
+//original selectors
+//.wrapper_main, .footer
+%extend_1 {
+  width: 960px;
+  margin: 0 auto;
+  display: block;
+}
+
+//original selectors
+//.wrapper_main_howWorks-title, .wrapper_main_partners-title, .wrapper_main_holiday-title
+%extend_2 {
+  text-align: center;
+  font-family: $font_0, $font_1;
+  font-weight: bold;
+  font-size: 22px;
+  color: $color_mine_shaft_approx;
+  margin-bottom: 23px;
+}
+
+//original selectors
+//.wrapper_main_howWorks_slideL, .wrapper_main_howWorks_slideR, .wrapper_main_howWorks_slideC
+%extend_3 {
+  height: 400px;
+  width: 31%;
+  display: inline-block;
+  position: relative;
+  margin: 1.15%;
+}
+
+//original selectors
+//#slides1, #slides2, #slides3
+%extend_4 {
+  position: relative;
+  height: 100%;
+  list-style-type: none;
+}
+
+//original selectors
+//#previous1, #previous2, #previous3
+%extend_5 {
+  height: 55px;
+  width: 30px;
+  background: $url_4;
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  z-index: 10;
+}
+
+//original selectors
+//#next1, #next2, #next3
+%extend_6 {
+  height: 55px;
+  width: 30px;
+  background: $url_4 0 -30px;
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  z-index: 10;
+}
+
+//original selectors
+//.footer_c2 p, .footer_c3 p
+%extend_7 {
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+  color: $color_mine_shaft_approx;
+  margin-bottom: 15px;
+}
+
+//original selectors
+//.footer_c2 li, a
+%extend_8 {
+  list-style-type: none;
+  font-family: $font_2, $font_1;
+  font-size: 14px;
+  color: $color_storm_dust_approx;
+  line-height: 24px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  @extend %extend_8;
+}
+.wrapper {
+  background-image: $url_0;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.wrapper_header {
+  padding-top: 40px;
+  width: 940px;
+  margin: 0 auto;
+  display: block;
+  height: 660px;
+}
+.wrapper_header-p {
+  color: $white;
+  font-size: 20px;
+  font-family: $font_0, $font_1;
+  margin-top: 8px;
+  display: block;
+}
+.wrapper_header-log {
+  float: right;
+  width: 160px;
+}
+.wrapper_header-signup {
+  border: 3px solid $white;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 20px;
+  line-height: 30px;
+  width: 85px;
+  text-align: center;
+  color: $white;
+  display: inline-block;
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+}
+.wrapper_header-login {
+  line-height: 36px;
+  margin-right: 15px;
+  color: $white;
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+}
+.wrapper_header-breack {
+  height: 150px;
+  width: 100%;
+}
+.wrapper_header-tagline {
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  color: $white;
+  font-size: 52px;
+  font-family: $font_0, $font_1;
+}
+.wrapper_header-tagline_sm {
+  display: block;
+  text-align: center;
+  color: $white;
+  font-size: 24px;
+  margin: 29px;
+  font-family: $font_2, $font_1;
+}
+.wrapper_header-bfind {
+  display: block;
+  margin: 0 auto;
+  color: $white;
+  line-height: 35px;
+  font-size: 17px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 20px;
+  background-color: $color_bittersweet_approx;
+  width: 225px;
+  text-align: center;
+}
+.wrapper_main {
+  @extend %extend_1;
+}
+.footer {
+  @extend %extend_1;
+  height: 200px;
+}
+.wrapper_main_howWorks-title {
+  @extend %extend_2;
+  margin-top: 95px;
+}
+.wrapper_main_partners-title {
+  @extend %extend_2;
+  margin-top: 80px;
+}
+.wrapper_main_holiday-title {
+  @extend %extend_2;
+  margin-top: 85px;
+}
+.wrapper_main_howWorks_slideL {
+  @extend %extend_3;
+  float: left;
+}
+.wrapper_main_howWorks_slideR {
+  @extend %extend_3;
+  float: right;
+}
+.wrapper_main_howWorks_slideC {
+  @extend %extend_3;
+}
+#slides1 {
+  @extend %extend_4;
+  .slide {
+    &:nth-of-type(1) {
+      background-image: $url_1;
+    }
+    &:nth-of-type(2) {
+      background-image: $url_2;
+    }
+    &:nth-of-type(3) {
+      background-image: $url_3;
+    }
+  }
+}
+#slides2 {
+  @extend %extend_4;
+  .slide {
+    &:nth-of-type(1) {
+      background-image: $url_3;
+    }
+    &:nth-of-type(2) {
+      background-image: $url_2;
+    }
+    &:nth-of-type(3) {
+      background-image: $url_1;
+    }
+  }
+}
+#slides3 {
+  @extend %extend_4;
+  .slide {
+    &:nth-of-type(1) {
+      background-image: $url_2;
+    }
+    &:nth-of-type(2) {
+      background-image: $url_1;
+    }
+    &:nth-of-type(3) {
+      background-image: $url_3;
+    }
+  }
+}
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  background-position: center;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity 1s;
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+#previous1 {
+  @extend %extend_5;
+}
+#previous2 {
+  @extend %extend_5;
+}
+#previous3 {
+  @extend %extend_5;
+}
+#next1 {
+  @extend %extend_6;
+}
+#next2 {
+  @extend %extend_6;
+}
+#next3 {
+  @extend %extend_6;
+}
+.wrapper_main_howWorks_slider_text {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  padding: 10px 20px 16px;
+}
+.wrapper_main_howWorks_sliderL_p1 {
+  font-family: $font_0, $font_1;
+  font-weight: 100;
+  color: $white;
+  width: 70px;
+  line-height: 20px;
+  background-color: $color_bittersweet_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 10px;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 22px;
+}
+.wrapper_main_howWorks_sliderL_p2 {
+  font-family: $font_0, $font_1;
+  font-weight: bold;
+  color: $white;
+  font-size: 24px;
+  line-height: 27px;
+  margin: 15px 0;
+}
+.wrapper_main_howWorks_sliderL_p3 {
+  font-family: $font_2;
+  font-size: 14px;
+  color: $color_celeste_approx;
+  line-height: 16px;
+}
+.wrapper_main_partners {
+  text-align: center;
+}
+.wrapper_main_holiday {
+  text-align: center;
+}
+.wrapper_main_partners_block {
+  width: 217px;
+  height: 250px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+.photo_partner {
+  width: 124px;
+  height: 125px;
+  display: inline-block;
+}
+.wrapper_main_partners-search {
+  margin: 10px;
+  display: inline-block;
+  border: 2px solid $color_sunset_orange_approx;
+  line-height: 36px;
+  width: 185px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 18px;
+  color: $color_sunset_orange_approx;
+  font-family: $font_0, $font_1;
+  font-size: 10pt;
+}
+.wrapper_main_partners1-img {
+  background: $url_5;
+}
+.wrapper_main_partners2-img {
+  background: $url_5 -124px 0;
+}
+.wrapper_main_partners3-img {
+  background: $url_5 -248px 0;
+}
+.wrapper_main_partners4-img {
+  background: $url_5 -373px 0;
+}
+.wrapper_main_partners_name {
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+  color: $color_mine_shaft_approx;
+  margin: 10px;
+}
+.wrapper_main_partners_comment {
+  font-family: $font_2, $font_1;
+  font-size: 14px;
+  color: $color_mine_shaft_approx;
+}
+.holiday_ideas {
+  height: 500px;
+  display: block;
+}
+.grid-item {
+  width: 31.5%;
+  line-height: 310px;
+  height: 312px;
+  margin: 0.9%;
+  text-align: center;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  span {
+    color: $white;
+    font-size: 22px;
+    font-family: $font_0, $font_1;
+  }
+}
+.grid-item--width2 {
+  width: 64.8%;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+}
+.wrapper_main_discover_holiday-wyw {
+  font-family: $font_2, $font_1;
+  font-size: 18px;
+  color: $color_mine_shaft_approx;
+  text-align: center;
+  margin: 36px;
+}
+#search {
+  width: 430px;
+  margin: 0 auto;
+}
+#field {
+  width: 240px;
+  height: 40px;
+  font-family: $font_2, $font_1;
+  font-size: 14px;
+  color: $color_mine_shaft_approx;
+  background: $white;
+  border: solid 1px $color_alto_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+}
+#submit {
+  cursor: pointer;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+  color: $white;
+  background-color: $color_sunset_orange_approx;
+  border: 1px solid $color_sunset_orange_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 20px;
+  margin-left: 5px;
+}
+#logo {
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+.footer_line {
+  width: 100%;
+  height: 100px;
+  border-bottom: 4px solid $color_sunset_orange_approx;
+  margin-bottom: 30px;
+}
+.footer_c1 {
+  float: left;
+  min-width: 26%;
+  span {
+    font-family: $font_0, $font_1;
+    font-size: 16px;
+    color: $color_sunset_orange_approx;
+    margin-left: 5px;
+  }
+}
+.footer_c2 {
+  float: left;
+  min-width: 17%;
+  p {
+    @extend %extend_7;
+  }
+  li {
+    @extend %extend_8;
+  }
+}
+.footer_c3 {
+  float: left;
+  min-width: 17%;
+  p {
+    @extend %extend_7;
+  }
+}
+.footer_logo {
+  float: right;
+  margin: 7px;
+}
+@media screen and(max-width: 940px) {
+  .wrapper_header {
+    width: 100%;
+  }
+  .wrapper_main {
+    width: 100%;
+  }
+  .footer {
+    width: 100%;
+  }
+  #next1 {
+    top: 50px;
+    right: 18px;
+  }
+  #next2 {
+    top: 50px;
+    right: 18px;
+  }
+  #next3 {
+    top: 50px;
+    right: 18px;
+  }
+  #previous1 {
+    top: 50px;
+    left: 18px;
+  }
+  #previous2 {
+    top: 50px;
+    left: 18px;
+  }
+  #previous3 {
+    top: 50px;
+    left: 18px;
+  }
+}
+@media screen and(max-width: 320px) {
+  .wrapper {
+    height: 540px;
+  }
+  .wrapper_header {
+    height: 480px;
+    padding-top: 20px;
+  }
+  .wrapper_header-log {
+    margin: 0 auto;
+    float: none;
+  }
+  .wrapper_header-p {
+    display: block;
+    text-align: center;
+    margin-top: 115px;
+  }
+  .wrapper_header-breack {
+    height: 30px;
+  }
+  .wrapper_header-tagline {
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .wrapper_header-tagline_sm {
+    margin: 5px;
+    font-size: 18px;
+  }
+  .wrapper_header-bfind {
+    width: 280px;
+  }
+  .wrapper_main_howWorks_slideL {
+    height: 240px;
+    width: 300px;
+    margin: 2px 5px;
+    float: none;
+  }
+  .wrapper_main_howWorks_slideR {
+    height: 240px;
+    width: 300px;
+    margin: 2px 5px;
+    float: none;
+  }
+  .wrapper_main_howWorks_slideC {
+    height: 240px;
+    width: 300px;
+    margin: 2px 5px;
+    float: none;
+  }
+  .wrapper_main_howWorks-title {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .wrapper_main_holiday-title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .wrapper_main_partners-title {
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+  #previous1 {
+    display: none;
+  }
+  #previous2 {
+    display: none;
+  }
+  #previous3 {
+    display: none;
+  }
+  #next1 {
+    display: none;
+  }
+  #next2 {
+    display: none;
+  }
+  #next3 {
+    display: none;
+  }
+  .grid-item {
+    width: 300px;
+    height: 125px;
+    line-height: 125px;
+  }
+  .grid-item--width2 {
+    width: 300px;
+    height: 125px;
+    line-height: 125px;
+  }
+  .wrapper_main_partners_block {
+    height: 218px;
+  }
+  .wrapper_main_partners-search {
+    width: 290px;
+  }
+  .footer_c1 {
+    width: 100%;
+    text-align: center;
+  }
+  .footer_c2 {
+    width: 100%;
+    text-align: center;
+  }
+  .footer_c3 {
+    width: 100%;
+    text-align: center;
+  }
+  #search {
+    width: 100%;
+    text-align: center;
+  }
+  #field {
+    width: 90%;
+    margin: 5px;
+  }
+  #submit {
+    width: 90%;
+    margin: 5px;
+  }
+  .footer_line {
+    height: 20px;
+    margin-bottom: 12px;
+  }
+  .footer_logo {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  }
+  .footer ul li {
+    display: inline;
+    margin-right: 5px;
+  }
+}
